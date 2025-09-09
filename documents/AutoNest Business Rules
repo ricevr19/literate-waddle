@@ -1,20 +1,20 @@
-A person is classified as an owner, guest, or enforcement officer.
-A person may have overlapping identities (an officer can also be an owner).
-A person who holds at least one long-term permit is an owner.
-A person who holds only short-term permits is a Guest.
-A guest may only register one vehicle at a time.
-An owner may register multiple vehicles in the system.
-An enforcement officer cannot validate their own vehicle(s).
-A vehicle must be associated with at least one owner or guest.
-A vehicle may be associated with more than one person for shared vehicles.
-A vehicle may have multiple permits historically, but only one active permit at a time.
-A vehicle is valid if its license plate exists in the system and it has an active, unexpired permit.
-A Vehicle is invalid if it is not registered, or it has an expired or inactive permit
-Each Permit is linked to one vehicle, one person, a permit type (long-term or short-term), a start date and end date
-A permit must be active to be valid.
-An expired permit makes the associated vehicle invalid.
-Owners manage their own long-term permits.
-An enforcement officer can search the database by license plate to verify a vehicle’s register person(s), current permit type, a permit’s status, and vehicle’s validity
-An enforcement officer can record violations against invalid vehicles
-A violation is linked to one vehicle and one enforcement officer
-A vehicle may accumulate multiple violations over time
+- A person is classified as an owner, guest, or enforcement officer.
+- A person may have overlapping identities (an officer can also be an owner).
+- A person who holds at least one long-term permit is an owner.
+- A person who holds only short-term permits is a Guest.
+- A guest may only register one vehicle at a time.
+- An owner may register multiple vehicles in the system.
+- An enforcement officer cannot validate their own vehicle(s).
+- A vehicle must be associated with at least one owner or guest.
+- A vehicle may be associated with more than one person for shared vehicles.
+- A vehicle may have multiple permits historically, but only one active permit at a time.
+- A vehicle is valid if its license plate exists in the system and it has an active, unexpired permit.
+- A vehicle is invalid if it is not registered, or it has an expired or inactive permit
+- Each permit is linked to one vehicle, one person, a permit type (long-term or short-term), a start date and end date
+- A permit must be active to be valid.
+- An expired permit makes the associated vehicle invalid.
+- Owners manage their own long-term permits.
+- An enforcement officer can search the database by license plate to verify a vehicle’s register person(s), current permit type, a permit’s status, and vehicle’s validity
+- An enforcement officer can record violations against invalid vehicles
+- A violation is linked to one vehicle and one enforcement officer
+- A vehicle may accumulate multiple violations over time
