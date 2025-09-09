@@ -1,6 +1,6 @@
 ## Project Objective
 
-AutoNest is a fictional company that uses database system designed for managing a parking lot that uses a stickerless permit system.
+AutoNest is a fictional company that uses a database system designed for managing a parking lot that uses a stickerless permit system.
 
 - Tracks vehicles by license palte and associates them with permits.
 - Permits classified as long-term or short-term that determines where a person is an Owner or Guest.
