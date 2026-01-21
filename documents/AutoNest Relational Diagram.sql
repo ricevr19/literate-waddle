@@ -49,8 +49,8 @@ CREATE TABLE "enforcement_validate_vehicle" (
 CREATE TABLE "permit" (
   "permit_id" integer PRIMARY KEY,
   "permit_type" varchar,
-  "start_date" datetime NOT NULL,
-  "end_date" datetime NOT NULL,
+  "start_date" timestamp NOT NULL,
+  "end_date" timestamp NOT NULL,
   "license_plate" varchar(8)
 );
 
@@ -58,7 +58,7 @@ CREATE TABLE "violation" (
   "violation_id" integer PRIMARY KEY,
   "status" varchar,
   "reason" varchar NOT NULL,
-  "violation_date" datetime NOT NULL,
+  "violation_date" timestamp NOT NULL,
   "license_plate" varchar(8),
   "person_id" integer
 );
