@@ -1,27 +1,27 @@
 CREATE TABLE "person" (
-  "person_id" integer PRIMARY KEY,
+  "person_id" serial PRIMARY KEY,
   "name" varchar NOT NULL,
   "email_address" varchar
 );
 
 CREATE TABLE "person_phonenumber" (
   "phone_number" varchar(20),
-  "person_id" integer,
+  "person_id" serial,
   PRIMARY KEY ("phone_number", "person_id")
 );
 
 CREATE TABLE "guest" (
-  "person_id" integer PRIMARY KEY,
+  "person_id" serial PRIMARY KEY,
   "visit" varchar,
   "license_plate" varchar(8)
 );
 
 CREATE TABLE "owner" (
-  "person_id" integer PRIMARY KEY
+  "person_id" serial PRIMARY KEY
 );
 
 CREATE TABLE "enforcement_officer" (
-  "person_id" integer PRIMARY KEY,
+  "person_id" serial PRIMARY KEY,
   "badge_number" varchar(7) UNIQUE NOT NULL
 );
 
@@ -31,23 +31,23 @@ CREATE TABLE "vehicle" (
   "make" varchar,
   "model" varchar,
   "color" varchar,
-  "guest_id" integer
+  "guest_id" serial
 );
 
 CREATE TABLE "owner_vehicle" (
-  "person_id" integer,
+  "person_id" serial,
   "license_plate" varchar(8),
   PRIMARY KEY ("person_id", "license_plate")
 );
 
 CREATE TABLE "enforcement_validate_vehicle" (
-  "person_id" integer,
+  "person_id" serial,
   "license_plate" varchar(8),
   PRIMARY KEY ("person_id", "license_plate")
 );
 
 CREATE TABLE "permit" (
-  "permit_id" integer PRIMARY KEY,
+  "permit_id" serial PRIMARY KEY,
   "permit_type" varchar,
   "start_date" timestamp NOT NULL,
   "end_date" timestamp NOT NULL,
@@ -55,12 +55,12 @@ CREATE TABLE "permit" (
 );
 
 CREATE TABLE "violation" (
-  "violation_id" integer PRIMARY KEY,
+  "violation_id" serial PRIMARY KEY,
   "status" varchar,
   "reason" varchar NOT NULL,
   "violation_date" timestamp NOT NULL,
   "license_plate" varchar(8),
-  "person_id" integer
+  "person_id" serial
 );
 
 ALTER TABLE "person_phonenumber" ADD FOREIGN KEY ("person_id") REFERENCES "person" ("person_id");
